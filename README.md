@@ -1,6 +1,6 @@
 # go-wireless
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/theojulienne/go-wireless)](https://goreportcard.com/report/github.com/theojulienne/go-wireless) [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/theojulienne/go-wireless) ![Go](https://github.com/theojulienne/go-wireless/workflows/Go/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hiifong/go-wireless)](https://goreportcard.com/report/github.com/hiifong/go-wireless) [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/hiifong/go-wireless) ![Go](https://github.com/hiifong/go-wireless/workflows/Go/badge.svg)
 
 A way to interact with the Wireless interfaces on a Linux machine using WPA Supplicant.
 
@@ -33,7 +33,6 @@ Examples of the usage can be found in the `cmd` directory as standalone commands
 * `wifistate` - dump the current wifi state as JSON
 * `wpalogs` - print logs as they happen
 * `wpaspy` - print events as they happen
-* `wpapi` - an HTTP API that can scan and connect to APs
 
 Get a list of wifi cards attached:
 
@@ -133,25 +132,3 @@ Or if you want to use it for a single operation most have `*WithContext` alterna
 ```golang
 wc.ConnectWithContext(ctx, net)
 ```
-
-## API
-
-There is an API that can be used with [gin](https://github.com/gin-gonic/gin):
-
-```golang
-r := gin.Default()
-api.SetupRoutes(r)
-r,Serve(":8080")
-```
-
-## Endpoints
-
-- [x] `GET /interfaces`
-- [ ] `GET /interfaces/:iface`
-- [ ] `PUT /interfaces/:iface`
-- [x] `GET /interfaces/:iface/aps`
-- [x] `GET /interfaces/:iface/networks`
-- [ ] `POST /interfaces/:iface/networks`
-- [ ] `PUT /interfaces/:iface/networks/:id_or_idstr`
-- [ ] `GET /interfaces/:iface/networks/:id_or_idstr`
-- [ ] `DELETE /interfaces/:iface/networks/:id_or_idstr`
