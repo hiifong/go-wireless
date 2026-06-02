@@ -15,7 +15,7 @@ import (
 	"time"
 )
 
-const CONN_MAX_LISTEN_BUFF = 3 * 1024 // Allow 3kB of buffer for listening to events
+const CONN_MAX_LISTEN_BUFF = 5 * 1024 // Allow 5kB of buffer for listening to events
 
 func init() {
 	rand.Seed(time.Now().Unix())
