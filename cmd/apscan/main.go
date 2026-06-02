@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/theojulienne/go-wireless"
+	"github.com/hiifong/go-wireless"
 )
 
 func main() {
